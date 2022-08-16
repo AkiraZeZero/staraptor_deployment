@@ -3,3 +3,23 @@ h1 {
     font-size: 2em;
     color: tomato;
 }
+#ogPokemon {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bg {
+    /* background-image: url("https://i.pinimg.com/originals/8e/46/15/8e46150f790fbefe438d9c2767c32ad1.gif"); */
+    background-image: url("http://pa1.narvii.com/7761/dba5234f7d2a2d446765860bdf30888ef3929e70r1-500-500_00.gif");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    text-align: center;
+    color: tomato;
+    font-size: 2em;
+}
