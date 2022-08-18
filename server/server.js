@@ -3,6 +3,17 @@ const cors = require("cors")
 const path = require("path")
 const app = express()
 
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: '71f4364caaf049daa978a347f6408853',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
+
 
 app.use(cors())
 app.use(express.json())
@@ -32,5 +43,8 @@ app.get(`/complimentBtn`, (req, res) => {
 
 const port = process.env.PORT || 4005
 
+// (╮°-°)╮┳━━┳
+
+//              ( ╯°□°)╯ ┻━━┻ GHAAAAWD WHY
 
 app.listen(port,console.log("Server running on 4005"))
