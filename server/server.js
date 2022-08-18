@@ -22,6 +22,14 @@ app.get(`/css`, (req, res) => {
     res.sendFile(path.join(__dirname, `../client/style.css`))
 })
 
+app.get(`/complimentBtn`, (req, res) => {
+    const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
+    let randomIndex = Math.floor(Math.random() * compliments.length);
+    let randomCompliment = compliments[randomIndex];
+    res.status(200).send(randomCompliment);
+    
+})
+
 const port = process.env.PORT || 4005
 
 
